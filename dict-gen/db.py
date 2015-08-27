@@ -12,7 +12,12 @@ syllables = db.syllables
 def buildTonesDB():
     global tones
     for item in gl.tones:
-        tones.insert_one(item)
+        tmp = {"name": item["name"], "code": item["code"]}
+        if item['open'] == '松':
+            tmp["open"] = True
+        if item['open'] == '紧':
+            tmp["open"] = False
+        tones.insert_one(tmp)
 
 def buildFinalsDB():
     global finals
@@ -23,6 +28,11 @@ def buildInitialsDB():
     global initials
     for item in gl.initials:
         initials.insert_one(item)
+
+def buildAlphabetsDB():
+    global alphabets
+    for item in gl.alphabets:
+        alphabets.insert_one(item)
 
 def clearDB():
     db.drop_collection(finals)

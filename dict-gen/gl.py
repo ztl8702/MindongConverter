@@ -1,3 +1,4 @@
 initials = []
 finals = []
 tones = []
+alphabets = []
