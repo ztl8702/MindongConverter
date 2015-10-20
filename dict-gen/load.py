@@ -35,3 +35,15 @@ def loadTones():
         gl.tones.append(tmp)
         #print(tmp)
     print("[Tones] Loaded "+str(count)+" entries.")
+
+def loadAlphabets():
+    global tones
+    file = open("data/alphabets.txt", "r", encoding= 'utf-8')
+    count = 0
+    for line in file:
+        count = count + 1
+        arr = line.split("\t")
+        tmp = {'code': arr[0].strip(),'name':arr[1].strip()}
+        gl.alphabets.append(tmp)
+        #print(tmp)
+    print("[Alphabets] Loaded "+str(count)+" entries.")

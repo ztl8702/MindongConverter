@@ -43,3 +43,4 @@ Temporary Items
 .apdisk
 docs/~$音方式对照表.docx
 *.pyc
+.vscode
