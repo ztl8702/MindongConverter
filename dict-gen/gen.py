@@ -3,7 +3,7 @@ import gl
 import db
 import load
 import alphabet_IPA
-print('\u02e8')
+#print('\u02e8')
 #Drop all collections
 db.clearDB()
 #Import Initials
